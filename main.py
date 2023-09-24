@@ -3,7 +3,7 @@ from os import rename
 from pytube import YouTube
 
 
-# pytubes "get_highest_resolution()"" is not working correctly
+# pytubes "get_highest_resolution()"" is not working correctly -- 2023-09-24
 def get_best_video_res(available_formats):
     format_list = []
 
