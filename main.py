@@ -32,7 +32,7 @@ def get_tag_from_entry(entry):
     return match
 
 
-def rename_audio_file(output_type, stream_title):
+def rename_output_file(output_type, stream_title):
     input_filename = stream_title + ".webm"
     output_filename =  stream_title + output_type
     rename(input_filename, output_filename)
@@ -59,7 +59,7 @@ if __name__ == "__main__":
             stream_tag = get_tag_from_entry(highest_stream)
             stream = yt.streams.get_by_itag(stream_tag)
             stream.download()
-            rename_audio_file(".mp4", yt.title)
+            rename_output_file(".mp4", yt.title)
             break
 
         # audio
@@ -70,7 +70,7 @@ if __name__ == "__main__":
             stream_tag = get_tag_from_entry(highest_stream)
             stream = yt.streams.get_by_itag(stream_tag)
             stream.download()
-            rename_audio_file(".mp3", yt.title)
+            rename_output_file(".mp3", yt.title)
             break
 
         else:
